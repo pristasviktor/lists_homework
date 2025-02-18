@@ -1,0 +1,12 @@
+[
+  {
+    "name": "test get sum",
+    "max_score": 5
+  },
+  {
+    "name": "test greet",
+    "test_file": "tests/test_greet.py",
+    "_comment": "The `test_file` attribute is optional, if not present, will be generated from the `name` based on the pattern above.",
+    "max_score": 20,
+  }
+]

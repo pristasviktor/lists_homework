@@ -1,0 +1,37 @@
+name: Generate Classroom YAML
+
+on:
+  push:
+    paths:
+      - 'exercises.json'  # Only trigger when exercises.json changes
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  generate-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_WORKFLOW_TOKEN }}  # Allows commit access
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install jq
+
+      - name: Generate classroom.yml
+        run: python generate_workflow.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/workflows/classroom.yml
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto-generate classroom.yml"
+          git push
+        env:
+          GH_WORKFLOW_TOKEN: ${{ secrets.GH_WORKFLOW_TOKEN }}
