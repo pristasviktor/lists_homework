@@ -1,14 +1,14 @@
 # Exercise 1
 # Check if the given list is sorted (from smallest to greatest)
-def isSorted(list):
+def is_sorted(list):
     # To be implemented
     return False
 
 # ====================================================
 
 # Exercise 2
-# Change the values on the selected two indexes in the given list.
-def change(list, idx1, idx2):
+# Swap the values on the selected two indexes in the given list.
+def swap(list, idx1, idx2):
     # To be implemented
     pass
 
@@ -63,14 +63,14 @@ def double_elements(list):
 
 if __name__ == '__main__':
     print("Exercise 1")
-    print(isSorted([1, 2, 5, 9]))  # True
-    print(isSorted([1, 7, 5, 9]))  # False
+    print(is_sorted([1, 2, 5, 9]))  # True
+    print(is_sorted([1, 7, 5, 9]))  # False
 
     print('\n====================================================\n')
 
     print("Exercise 2")
-    change([1, 3, 2, 6, 7, 5], 0, 2)  # [2, 3, 1, 6, 7, 5]
-    change([1, 3, 2, 6, 7, 5], 3, 4)  # [1, 3, 2, 7, 6, 5]
+    swap([1, 3, 2, 6, 7, 5], 0, 2)  # [2, 3, 1, 6, 7, 5]
+    swap([1, 3, 2, 6, 7, 5], 3, 4)  # [1, 3, 2, 7, 6, 5]
 
     print('\n====================================================\n')
 

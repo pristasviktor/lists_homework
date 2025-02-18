@@ -1,12 +1,34 @@
 [
   {
-    "name": "test get sum",
+    "name": "is sorted",
     "max_score": 5
   },
   {
-    "name": "test greet",
-    "test_file": "tests/test_greet.py",
-    "_comment": "The `test_file` attribute is optional, if not present, will be generated from the `name` based on the pattern above.",
-    "max_score": 20,
+    "name": "swap",
+    "max_score": 5
+  },
+  {
+    "name": "greatest neighbour difference",
+    "max_score": 5
+  },
+  {
+    "name": "index of max",
+    "max_score": 5
+  },
+  {
+    "name": "reverse list",
+    "max_score": 5
+  },
+  {
+    "name": "common elements",
+    "max_score": 5
+  },
+  {
+    "name": "count element",
+    "max_score": 5
+  },
+  {
+    "name": "double elements",
+    "max_score": 5
   }
 ]
